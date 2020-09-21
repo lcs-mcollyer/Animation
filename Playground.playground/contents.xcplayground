@@ -3,6 +3,8 @@
     <pages>
         <page name='Introduction'/>
         <page name='Tortoise Examples'/>
-        <page name='Blank canvas to copy'/>
+        <page name='blank canvas to copy'/>
+        <page name='T-shirt'/>
+        <page name='Grid Forms'/>
     </pages>
 </playground>
