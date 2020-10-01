@@ -74,6 +74,23 @@ for step in stride(from: 25, through: 175, by: 25) {
     canvas.drawLine(from: Point(x: step, y: 0), to: Point(x: step, y: step))
     canvas.drawLine(from: Point(x: step, y: step), to: Point(x: 0, y: step))
 }
+
+
+for step in stride(from: 375, through: 225, by: -25) {
+    canvas.drawLine(from: Point(x: step, y: 400), to: Point(x: step, y: step))
+     canvas.drawLine(from: Point(x: step, y: step), to: Point(x: 400, y: step))
+}
+
+
+
+
+
+
+
+
+
+
+
 //
 //
 //canvas.drawLine(from: Point(x: 25, y: 0), to: Point(x: 25, y: 25))
