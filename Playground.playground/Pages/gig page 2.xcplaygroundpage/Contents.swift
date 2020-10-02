@@ -64,27 +64,56 @@ PlaygroundPage.current.liveView = canvas
  */
 canvas.drawAxes(withScale: true, by: 50)
 
+// COLORS
+let pink = Color(hue: 338, saturation: 83, brightness: 89, alpha: 100)
+let black = Color(hue: 0, saturation: 0, brightness: 0, alpha: 100)
+let beige = Color(hue: 69, saturation: 6, brightness: 87, alpha: 100)
 
 
-// draw bottom right of pattern
+canvas.fillColor = pink
+canvas.drawRectangle(at: Point(x: 0,y: 0), width: 400, height: 600)
+
 
 canvas.defaultLineWidth = 12
 
+for x in stride(from: 50, through: 300, by: 50){
+    if x % 100 == 0 {
+        canvas.fillColor = beige
+    }else{
+        canvas.fillColor = black
+    }
+}
+
+
+
+
+
+// draw bottom left pattern
 for step in stride(from: 25, through: 175, by: 25) {
     canvas.drawLine(from: Point(x: step, y: 0), to: Point(x: step, y: step))
     canvas.drawLine(from: Point(x: step, y: step), to: Point(x: 0, y: step))
 }
 
 
-for step in stride(from: 375, through: 225, by: -25) {
-    canvas.drawLine(from: Point(x: step, y: 400), to: Point(x: step, y: step))
-     canvas.drawLine(from: Point(x: step, y: step), to: Point(x: 400, y: step))
+////for step in stride(from: 375, through: 225, by: -25) {
+////    step
+////    canvas.drawLine(from: Point(x: step, y: 400), to: Point(x: step, y: step))
+////     canvas.drawLine(from: Point(x: step, y: step), to: Point(x: 400, y: step))
+//}
+
+
+for step in stride(from: 225, through: 375, by: 25) {
+    step
+    canvas.drawLine(from: Point(x: step, y: 0), to: Point(x: step, y: step))
+    canvas.drawLine(from: Point(x: step, y: step), to: Point(x: 225, y: step))
 }
-
-
-
-
-
+//
+//for step in stride(from: 225, through: 375, by: -25) {
+//    step
+//    canvas.drawLine(from: Point(x: step, y: 0), to: Point(x: step, y: step))
+//    canvas.drawLine(from: Point(x: step, y: step), to: Point(x: 0, y: step))
+//
+//}
 
 
 
@@ -114,9 +143,4 @@ for step in stride(from: 375, through: 225, by: -25) {
 //canvas.drawLine(from: Point(x: 175, y: 0), to: Point(x: 175, y: 175))
 //canvas.drawLine(from: Point(x: 175, y: 175), to: Point(x: 0, y: 175))
 //// line 175 ^
-//
-//
-
-
-
 
