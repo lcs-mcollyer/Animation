@@ -86,8 +86,16 @@ for x in stride(from: 50, through: 300, by: 50){
 
 
 
-
-
+//for x in stride(from: 50, through: 300, by: 50) {
+//    if x % 100 == 0{
+//    }
+//    canvas.fillColor = beige{
+//else if
+//{
+//    canvas.fillColor = black
+//}
+//        }
+//    }
 // draw bottom left pattern
 for step in stride(from: 25, through: 175, by: 25) {
     canvas.drawLine(from: Point(x: step, y: 0), to: Point(x: step, y: step))
@@ -95,25 +103,59 @@ for step in stride(from: 25, through: 175, by: 25) {
 }
 
 
-////for step in stride(from: 375, through: 225, by: -25) {
-////    step
-////    canvas.drawLine(from: Point(x: step, y: 400), to: Point(x: step, y: step))
-////     canvas.drawLine(from: Point(x: step, y: step), to: Point(x: 400, y: step))
-//}
-
-
-for step in stride(from: 225, through: 375, by: 25) {
+for step in stride(from: 375, through: 225, by: -25) {
     step
-    canvas.drawLine(from: Point(x: step, y: 0), to: Point(x: step, y: step))
-    canvas.drawLine(from: Point(x: step, y: step), to: Point(x: 225, y: step))
+    canvas.drawLine(from: Point(x: step, y: 400), to: Point(x: step, y: step))
+     canvas.drawLine(from: Point(x: step, y: step), to: Point(x: 400, y: step))
 }
+
+
+//for step in stride(from: 375, through: 225, by: -25) {
+//    step
+//    canvas.drawLine(from: Point(x: 375, y: step), to: Point(x: step, y: step))
+//    canvas.drawLine(from: Point(x: 225, y: step), to: Point(x: step, y: step))
+//    step
+//}
 //
-//for step in stride(from: 225, through: 375, by: -25) {
+//for step in stride(from: 225, through: 375, by: 25) {
 //    step
 //    canvas.drawLine(from: Point(x: step, y: 0), to: Point(x: step, y: step))
 //    canvas.drawLine(from: Point(x: step, y: step), to: Point(x: 0, y: step))
 //
 //}
+
+
+
+
+
+
+
+
+
+//canvas.drawRectangle(at: Point(x: 0, y: 0), width: 200, height: 200)
+//
+//
+//canvas.drawRectangle(at: Point(x: 0, y: 0), width: 175, height: 175)
+
+//canvas.lowercaseWord(pixies)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

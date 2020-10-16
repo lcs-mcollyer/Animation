@@ -81,7 +81,7 @@ for y in stride(from: 0, through: 400, by: 40) {
             canvas.fillColor = limeGreen
         } else if x + y == 400 && x != 0 && x != 400 {
             canvas.fillColor = limeGreen
-        } else if x + y == > 4001 {
+        } else if x + y > 400 {
             canvas.fillColor = limeGreen
         } else {
             canvas.fillColor = offWhite
@@ -94,3 +94,12 @@ for y in stride(from: 0, through: 400, by: 40) {
 
 // draw the axes with a scale
 canvas.drawAxes(withScale: true, by: 50)
+
+
+canvas.drawText(message: "Pixies", at: Point(x:30, y: 400), size: 55, kerning: 0)
+canvas.drawText(message: "saturday", at: Point(x:30, y: 550), size: 15, kerning: 0)
+canvas.drawText(message: "december 13 1986", at: Point(x:30, y: 530), size: 15, kerning: 0)
+canvas.drawText(message: "9 pm over 21", at: Point(x:30, y: 510), size: 15, kerning: 0)
+canvas.drawText(message: "at the rat", at: Point(x:250, y: 550), size: 15, kerning: 0)
+canvas.drawText(message: "528 commonwealth", at: Point(x:250, y: 530), size: 15, kerning: 0)
+canvas.drawText(message: "Boston, mass.", at: Point(x:250, y: 510), size: 15, kerning: 0)

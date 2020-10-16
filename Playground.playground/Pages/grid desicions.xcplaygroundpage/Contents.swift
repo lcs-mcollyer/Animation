@@ -44,7 +44,7 @@ PlaygroundPage.current.liveView = canvas
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
  
  */
-canvas.linewidth : 5
+//canvas.linewidth : 5
 
 
 // draw the axes with a scale

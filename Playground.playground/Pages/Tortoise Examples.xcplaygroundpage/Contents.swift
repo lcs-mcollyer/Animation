@@ -6,16 +6,16 @@
 //: [Documentation for the Tortoise abstraction](http://russellgordon.ca/CanvasGraphics/Documentation/Classes/Tortoise.html) is available.
 /*:
  ## Canvas size
- 
+
  Set the size of your desired canvas by adjusting the constants on lines 10 and 11.
  */
 let preferredWidth = 500
 let preferredHeight = 500
 /*:
  ## Required code
- 
+
  Lines 21 to 29 are required to make the playground run.
- 
+
  Please do not remove.
  */
 import Cocoa
@@ -52,10 +52,10 @@ let turtle = Tortoise(drawingUpon: canvas)
 
 // draw an n-sided polygon
 func drawPolygon(sides: Int, turtle: Tortoise) {
-  
+
     //Figure out how much to turn by
     let angle = 360 / sides
-    
+
     for i in 1...sides {
   //      turtle.drawSelf()
         turtle.forward(steps: 40)
@@ -234,10 +234,7 @@ for i in 1...10 {
 //
 //// Draw turtle at current position
 //turtle.penUp()
-//turtle.setPosition(to: Point(x: 50, y: 275))
-//turtle.setHeading(to: 135)
-//turtle.drawSelf()
-//
+/
 //// Test turtle drawing of self
 //turtle.penUp()
 //turtle.setPosition(to: Point(x: 100, y: 475))
@@ -255,20 +252,23 @@ for i in 1...10 {
 //    turtle.left(by: 45)
 //    turtle.drawSelf()
 //}
-
+//turtle.setPosition(to: Point(x: 50, y: 275))
+//turtle.setHeading(to: 135)
+//turtle.drawSelf()
+/
 
 /*:
  ## Show the Assistant Editor
  Don't see any results?
- 
+
  Remember to show the Assistant Editor (1), and then switch to Live View (2):
- 
+
  ![timeline](timeline.png "Timeline")
 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
- 
+
  Please commit and push your work often.
- 
+
  ![source_control](source-control.png "Source Control")
  */

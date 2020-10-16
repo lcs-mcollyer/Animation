@@ -10,5 +10,7 @@
         <page name='gig page'/>
         <page name='gig page 2'/>
         <page name=' testing %'/>
+        <page name='sketch'/>
+        <page name='talking heads'/>
     </pages>
 </playground>

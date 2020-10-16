@@ -30,6 +30,9 @@
 		81A9FADB219A151B003E6502 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9FADA219A151B003E6502 /* Helpers.swift */; };
 		81A9FADD219A156E003E6502 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9FADC219A156E003E6502 /* Color.swift */; };
 		81F935042476B0E000CD75D8 /* Tortoise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F935032476B0E000CD75D8 /* Tortoise.swift */; };
+		F81DC9712538C91600FC9AFF /* MovingSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DC9702538C91600FC9AFF /* MovingSquare.swift */; };
+		F81DC9732538D1D800FC9AFF /* Animation-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = F81DC9722538D1D800FC9AFF /* Animation-Bridging-Header.h */; };
+		F81DC9752539CCD500FC9AFF /* FivecCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DC9742539CCD500FC9AFF /* FivecCircles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +120,9 @@
 		81DBFC2322E96442005EDE85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81DBFC2422E96442005EDE85 /* .tgz */ = {isa = PBXFileReference; lastKnownFileType = text; path = .tgz; sourceTree = "<group>"; };
 		81F935032476B0E000CD75D8 /* Tortoise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tortoise.swift; sourceTree = "<group>"; };
+		F81DC9702538C91600FC9AFF /* MovingSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingSquare.swift; sourceTree = "<group>"; };
+		F81DC9722538D1D800FC9AFF /* Animation-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Animation-Bridging-Header.h"; sourceTree = "<group>"; };
+		F81DC9742539CCD500FC9AFF /* FivecCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FivecCircles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +177,10 @@
 				814ADAF4248EAB6A00F80486 /* TurtleSketch.swift */,
 				814ADAFA248EB45F00F80486 /* AudioInputSketch.swift */,
 				814ADAFE248EB5E300F80486 /* StaticSketch.swift */,
+				F81DC9722538D1D800FC9AFF /* Animation-Bridging-Header.h */,
 				814ADAFC248EB56900F80486 /* EmptySketch.swift */,
+				F81DC9702538C91600FC9AFF /* MovingSquare.swift */,
+				F81DC9742539CCD500FC9AFF /* FivecCircles.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -387,6 +396,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81DC9732538D1D800FC9AFF /* Animation-Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +452,7 @@
 				TargetAttributes = {
 					81064A051C130A10007ED524 = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1170;
 					};
 					818878392199C645008CB375 = {
 						CreatedOnToolsVersion = 10.0;
@@ -494,12 +504,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81DC9712538C91600FC9AFF /* MovingSquare.swift in Sources */,
 				81064A0C1C130A10007ED524 /* ViewController.swift in Sources */,
 				81064A1C1C132DA2007ED524 /* Sketch.swift in Sources */,
 				81064A0A1C130A10007ED524 /* AppDelegate.swift in Sources */,
 				814ADAF5248EAB6A00F80486 /* TurtleSketch.swift in Sources */,
 				814ADAF9248EB34900F80486 /* BasicSketch.swift in Sources */,
 				814ADAFB248EB45F00F80486 /* AudioInputSketch.swift in Sources */,
+				F81DC9752539CCD500FC9AFF /* FivecCircles.swift in Sources */,
 				814ADAF1248E9F8200F80486 /* AudioAnalyser.swift in Sources */,
 				814ADAF3248E9FDA00F80486 /* Sketchable.swift in Sources */,
 				814ADAFD248EB56900F80486 /* EmptySketch.swift in Sources */,
@@ -651,6 +663,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -665,6 +678,8 @@
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.russellgordon.Animation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Animation/Animation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -674,6 +689,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -688,6 +704,7 @@
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.russellgordon.Animation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Animation/Animation-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
