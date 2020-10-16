@@ -17,8 +17,10 @@ class FiveCircles: NSObject, Sketchable {
     var canvas: Canvas
     
     // Vertical position
-    var x = 250
-    var y = 250
+    var x1 = 250
+    var y1 = 250
+    var y2 = 250
+    var x2 = 250
     // This function runs once
     override init() {
         
@@ -31,17 +33,26 @@ class FiveCircles: NSObject, Sketchable {
     func draw() {
         
         //Change Horizontal position
-        x -= 1
+        x1 -= 1
        
         
-        // Draw a square in the middle of the canvas
-        canvas.drawEllipse(at: Point(x: x, y: 250), width: 25, height: 25)
+        // Draw a Line going horizontally to the left of the canvas
+        canvas.drawEllipse(at: Point(x: x1, y: 250), width: 25, height: 25)
         
         
-        y += 1
-        // Draw a Second Square in the top of the canvas
-        canvas.drawEllipse(at: Point(x: 250, y: y), width: 25, height: 25)
+        y1 += 1
+        // Draw a Second line Going Straight Upward
+        canvas.drawEllipse(at: Point(x: 250, y: y1), width: 25, height: 25)
+        
+        y2 -= 1
+        // draw a third line going to the bottom of the screen
+        canvas.drawEllipse(at: Point(x: 250, y: y2), width: 25, height: 25)
+  
+        x2 += 1
+        //draw a fourth line going to the right of the screen
+        canvas.drawEllipse(at: Point(x: x2, y: 250), width: 25, height: 25)
     }
+
     
 }
 
