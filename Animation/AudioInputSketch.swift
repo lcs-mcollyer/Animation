@@ -10,7 +10,7 @@ import Foundation
 import CanvasGraphics
 
 // NOTE: This sketch reacts to audio input. Try talking loudly, or even shouting,
-//       while the sketch draws. 🙂
+//       while the sketch draws. 
 class AudioInputSketch: NSObject, Sketchable {
     
     // NOTE: Every sketch must contain an object of type Canvas named 'canvas'
