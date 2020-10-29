@@ -47,10 +47,11 @@ PlaygroundPage.current.liveView = canvas
  */
 // declaring colours
 let orange = Color(hue: 21, saturation: 76, brightness: 94, alpha: 100)
-let blue = Color(hue: 201, saturation: 72, brightness: 85, alpha: 65)
+let blue = Color(hue: 201, saturation: 80, brightness: 85, alpha: 65)
 let offWhite = Color(hue: 208, saturation: 1, brightness: 88, alpha: 100)
 let black = Color(hue: 0, saturation: 100, brightness: 0, alpha: 100)
 let deepRed = Color(hue: 5, saturation: 85, brightness: 94, alpha: 100)
+let deepRed2 = Color(hue: 0, saturation: 50, brightness: 100, alpha: 35)
 
 //setting bacground colour
 canvas.fillColor = deepRed
@@ -61,23 +62,35 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 for x in stride(from: 0, to: 400, by: 100) {
     for y in stride(from: 0, to: 400, by: 100) {
-        
+        canvas.drawShapesWithBorders = false
         canvas.fillColor = Color.white
         var vertices: [Point] = []
         vertices.append(Point(x: x + 50,
-                              y: 0)) //start
+                              y: y )) //start
         vertices.append(Point(x: x + 100,
                               y: y + 50))
         vertices.append(Point(x: x + 50,
                               y: y + 100))
-        vertices.append(Point(x: 0,
+        vertices.append(Point(x: x,
                               y: y + 50)) //end
         
+        canvas.drawCustomShape(with: vertices)
+        
         canvas.fillColor = deepRed
+        
         canvas.drawEllipse(at: Point(x: x + 50, y: y + 50), width: 65, height: 65)
         
         
+        canvas.fillColor = blue
+        canvas.drawEllipse(at: Point(x: x + 75, y: y + 25), width: 65, height: 65)
+        canvas.fillColor = deepRed2
+        canvas.drawEllipse(at: Point(x: x + 130, y: 70), width: 65, height: 65)
+        
+        
     }
+
+   
+
 }
 
 
