@@ -1,3 +1,4 @@
+
 //: [Previous](@previous) / [Next](@next)
 //: # Blank canvas to copy
 //:
@@ -16,8 +17,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 500
-let preferredHeight = 500
+let preferredWidth = 400
+let preferredHeight = 600
 /*:
  ## Required code
  
@@ -46,41 +47,38 @@ PlaygroundPage.current.liveView = canvas
  */
 
 
-// draw the axes with a scale
+/*:
+ ## Show the Assistant Editor
+ Don't see any results?
+ 
+ Remember to show the Assistant Editor (1), and then switch to Live View (2):
+ 
+ ![timeline](timeline.png "Timeline")
+
+ ## Use source control
+ To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
+ 
+ Please commit and push your work often.
+ 
+ ![source_control](source-control.png "Source Control")
+ */
 canvas.drawAxes(withScale: true, by: 50)
 
-// Draw a line of circles
-for y in stride(from: 0, to: 500, by: 50) {
-    
-    for x in stride(from: 0, to: 500, by: 50) {
-     
-        
-        // Code in this block is repeated 10 times
-        x
-        
-        // create random size
-        let size = Int.random(in: 25...50)
-        // Draw circle
-        canvas.drawEllipse(at: Point(x: x + 25, y: y + 25), width: size, height: size)
-        
+let offWhite = Color(hue: 81, saturation: 5, brightness: 88, alpha: 100)
+
+
+// draw bottom right of pattern
+
+canvas.defaultLineWidth = 12
+
+for x in stride(from: 50, through: 300, by: 50){
+    if x % 100 == 0 {
+        canvas.fillColor = offWhite
     }
-    /*:
-     ## Show the Assistant Editor
-     Don't see any results?
-     
-     Remember to show the Assistant Editor (1), and then switch to Live View (2):
-     
-     ![timeline](timeline.png "Timeline")
-
-     ## Use source control
-     To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
-     
-     Please commit and push your work often.
-     
-     ![source_control](source-control.png "Source Control")
-     */
-
-    
 }
 
 
+for step in stride(from: 25, through: 175, by: 25) {
+    canvas.drawLine(from: Point(x: step, y: 0), to: Point(x: step, y: step))
+    canvas.drawLine(from: Point(x: step, y: step), to: Point(x: 0, y: step))
+}

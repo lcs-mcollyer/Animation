@@ -23,13 +23,13 @@ class BouncingCircle: NSObject, Sketchable {
     var y1 = Int.random(in: 1...500)
     var dx1 = 1
     var dy1 = 1
-
+    
     // Second circle
     var x2 = Int.random(in: 1...500)
     var y2 = Int.random(in: 1...500)
     var dx2 = 1
     var dy2 = 1
-
+    
     
     //Third circle
     var x3 = Int.random(in: 1...500)
@@ -61,7 +61,7 @@ class BouncingCircle: NSObject, Sketchable {
         // Move circle 1
         y1 += dy1
         x1 += dx1
-
+        
         // Move circle 2
         y2 += dy2
         x2 += dx2
@@ -89,36 +89,36 @@ class BouncingCircle: NSObject, Sketchable {
         
         
         // Drawing circle 2
-               canvas.drawEllipse(at: Point(x: x2, y: y2), width: 30, height: 30)
-               
-               // Bounce circle 2
-               if x2 >= 500 {
-                   dx2 = -15
-               } else if x2 <= 0 {
-                   dx2 = int3
-                   
-               } else if y2 >= 500 {
-                   dy2 = -15
-                   
-               } else if y2 <= 0 {
-                   dy2 = int3
-               }
-               
-        // Drawing circle 3
-        canvas.drawEllipse(at: Point(x: x3, y: y3, width: 30, height: 30)
+        canvas.drawEllipse(at: Point(x: x2, y: y2), width: 30, height: 30)
         
-            // Bounce circle 3
-            if x3 >= 500 {
-              dx3 = -15
-            } else if x3 <= 0 {
-              dx3 = int3
-              
-            } else if y3 >= 500 {
-              dy3 = -15
-              
-            } else if y3 <= 0 {
-              dy3 = int3
-          }
+        // Bounce circle 2
+        if x2 >= 500 {
+            dx2 = -15
+        } else if x2 <= 0 {
+            dx2 = int3
+            
+        } else if y2 >= 500 {
+            dy2 = -15
+            
+        } else if y2 <= 0 {
+            dy2 = int3
+        }
+        
+        // Drawing circle 3
+        canvas.drawEllipse(at: Point(x: x3, y: y3), width: 30, height: 30)
+        
+        // Bounce circle 3
+        if x3 >= 500 {
+            dx3 = -15
+        } else if x3 <= 0 {
+            dx3 = int3
+            
+        } else if y3 >= 500 {
+            dy3 = -15
+            
+        } else if y3 <= 0 {
+            dy3 = int3
+        }
     }
     
     
