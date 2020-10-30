@@ -83,28 +83,28 @@ for x in stride(from: 0, to: 400, by: 100) {
         // drawing the blue circles
         canvas.fillColor = blue
         canvas.drawEllipse(at: Point(x: x + 75, y: y + 25), width: 65, height: 65)
-       
+        
         // drawing the dark red circles
         canvas.fillColor = deepRed2
         canvas.drawEllipse(at: Point(x: x + 130, y: y + 70), width: 65, height: 65)
         
         
     }
-
-   
-
+    
+    
+    
 }
 
 canvas.drawText(message: "the clash", at: Point(x:15, y: 400), size: 50, kerning: 0)
 
-canvas.drawText(message: "£2.25 / friday ", at: Point(x:20, y: 565), size: 8, kerning: 0)
-canvas.drawText(message: "december 22 1978 ", at: Point(x:20, y: 553), size: 8, kerning: 0)
+canvas.drawText(message: "£2.25 / friday ", at: Point(x: 20, y: 565), size: 8, kerning: 0)
+canvas.drawText(message: "december 22 1978 ", at: Point(x: 20, y: 553), size: 8, kerning: 0)
 
- canvas.drawText(message: "christmas party ", at: Point(x:105, y: 565), size: 8, kerning: 0)
- canvas.drawText(message: "with the slits and the innocents ", at: Point(x:105, y: 553), size: 8, kerning: 0)
+canvas.drawText(message: "christmas party ", at: Point(x: 105, y: 565), size: 8, kerning: 0)
+canvas.drawText(message: "with the slits and the innocents ", at: Point(x: 105, y: 553), size: 8, kerning: 0)
 
-canvas.drawText(message: "fiars aylesbury hall ", at: Point(x:250, y: 565), size: 8, kerning: 0)
-canvas.drawText(message: "aylesbury, buckinghamshire, england ", at: Point(x:250, y: 553), size: 8, kerning: 0)
+canvas.drawText(message: "fiars aylesbury hall ", at: Point(x: 250, y: 565), size: 8, kerning: 0)
+canvas.drawText(message: "aylesbury, buckinghamshire, england ", at: Point(x: 250, y: 553), size: 8, kerning: 0)
 
 /*:
  ## Show the Assistant Editor
@@ -113,7 +113,7 @@ canvas.drawText(message: "aylesbury, buckinghamshire, england ", at: Point(x:250
  Remember to show the Assistant Editor (1), and then switch to Live View (2):
  
  ![timeline](timeline.png "Timeline")
-
+ 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
  
