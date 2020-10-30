@@ -91,14 +91,8 @@ for x in stride(from: 0, to: 400, by: 100) {
     
 }
 
-
-canvas.drawText(message: "Oasis", at: Point(x:15, y: 400), size: 50, kerning: 0)
-
-canvas.drawText(message: "£25.00 / Per day ", at: Point(x: 20, y: 565), size: 8, kerning: 0)
-canvas.drawText(message: "december 22 1978 ", at: Point(x: 20, y: 553), size: 8, kerning: 0)
-
-canvas.drawText(message: "christmas party ", at: Point(x: 105, y: 565), size: 8, kerning: 0)
-canvas.drawText(message: "with the slits and the innocents ", at: Point(x: 105, y: 553), size: 8, kerning: 0)
-
-canvas.drawText(message: "Knebworth House, Hertfordshire", at: Point(x: 250, y: 565), size: 8, kerning: 0)
-
+// adding text
+canvas.drawText(message: "OASIS", at: Point(x:10 , y: 400), size: 50, kerning: 0 )
+canvas.drawText(message: " At Knebworth", at: Point(x:10 , y: 450), size: 15, kerning: 0 )
+canvas.drawText(message: " £22.50 / per person", at: Point(x: 235 , y: 525), size: 15, kerning: 0 )
+canvas.drawText(message: " With The Charlatans, Manic Street Preachers, Kula Shaker, Cast and Dreadzone.", at: Point(x: 5 , y: 580), size: 10, kerning: 0 )
