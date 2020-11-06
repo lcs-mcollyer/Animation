@@ -34,7 +34,7 @@
 		F81DC9732538D1D800FC9AFF /* Animation-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = F81DC9722538D1D800FC9AFF /* Animation-Bridging-Header.h */; };
 		F81DC9752539CCD500FC9AFF /* FivecCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DC9742539CCD500FC9AFF /* FivecCircles.swift */; };
 		F81DC9772539DF1C00FC9AFF /* RandomSquareGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DC9762539DF1C00FC9AFF /* RandomSquareGenerator.swift */; };
-		F81DC979253DC01E00FC9AFF /* BouncingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DC978253DC01E00FC9AFF /* BouncingCircle.swift */; };
+		F81DC979253DC01E00FC9AFF /* LineFromCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DC978253DC01E00FC9AFF /* LineFromCircles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,7 +126,7 @@
 		F81DC9722538D1D800FC9AFF /* Animation-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Animation-Bridging-Header.h"; sourceTree = "<group>"; };
 		F81DC9742539CCD500FC9AFF /* FivecCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FivecCircles.swift; sourceTree = "<group>"; };
 		F81DC9762539DF1C00FC9AFF /* RandomSquareGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSquareGenerator.swift; sourceTree = "<group>"; };
-		F81DC978253DC01E00FC9AFF /* BouncingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncingCircle.swift; sourceTree = "<group>"; };
+		F81DC978253DC01E00FC9AFF /* LineFromCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineFromCircles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +185,7 @@
 				F81DC9702538C91600FC9AFF /* MovingSquare.swift */,
 				F81DC9742539CCD500FC9AFF /* FivecCircles.swift */,
 				F81DC9762539DF1C00FC9AFF /* RandomSquareGenerator.swift */,
-				F81DC978253DC01E00FC9AFF /* BouncingCircle.swift */,
+				F81DC978253DC01E00FC9AFF /* LineFromCircles.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -518,7 +518,7 @@
 				814ADAF9248EB34900F80486 /* BasicSketch.swift in Sources */,
 				814ADAFB248EB45F00F80486 /* AudioInputSketch.swift in Sources */,
 				F81DC9752539CCD500FC9AFF /* FivecCircles.swift in Sources */,
-				F81DC979253DC01E00FC9AFF /* BouncingCircle.swift in Sources */,
+				F81DC979253DC01E00FC9AFF /* LineFromCircles.swift in Sources */,
 				814ADAF1248E9F8200F80486 /* AudioAnalyser.swift in Sources */,
 				F81DC9772539DF1C00FC9AFF /* RandomSquareGenerator.swift in Sources */,
 				814ADAF3248E9FDA00F80486 /* Sketchable.swift in Sources */,

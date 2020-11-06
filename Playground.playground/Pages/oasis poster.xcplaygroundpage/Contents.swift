@@ -28,9 +28,9 @@ let preferredHeight = 600
 import Cocoa
 import PlaygroundSupport
 import CanvasGraphics
-
+let canvas = Canvas(width: preferredWidth, height: preferredHeight, quality: .Ultra)
 // Create canvas
-let canvas = Canvas(width: preferredWidth, height: preferredHeight)
+//let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 
 // Show the canvas in the playground's live view
 PlaygroundPage.current.liveView = canvas
@@ -96,3 +96,4 @@ canvas.drawText(message: "OASIS", at: Point(x:10 , y: 400), size: 50, kerning: 0
 canvas.drawText(message: " At Knebworth", at: Point(x:10 , y: 450), size: 15, kerning: 0 )
 canvas.drawText(message: " £22.50 / per person", at: Point(x: 235 , y: 525), size: 15, kerning: 0 )
 canvas.drawText(message: " With The Charlatans, Manic Street Preachers, Kula Shaker, Cast and Dreadzone.", at: Point(x: 5 , y: 580), size: 10, kerning: 0 )
+canvas.copyToClipboard()
