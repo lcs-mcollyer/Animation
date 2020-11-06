@@ -16,15 +16,16 @@ class LineFromCircles: NSObject, Sketchable {
     // Therefore, the line immediately below must always be present.
     var canvas: Canvas
     
-    
+    // Centre of first circle
     var x1 = Int.random(in: 1...500)
     var y1 = Int.random(in: 1...500)
     var dx1 = 1
     var dy1 = 1
-    var pog = Int.random(in: 1...500)
-    var pog2 = Int.random(in: 1...500)
-    var fx1 = 1
-    var fy1 = 1
+    // centre of second circle
+    var x2 = Int.random(in: 1...500)
+    var y2 = Int.random(in: 1...500)
+    var dx2 = 1
+    var dy2 = 1
     
     // This function runs once
     override init() {
@@ -53,55 +54,64 @@ class LineFromCircles: NSObject, Sketchable {
         canvas.drawRectangle(at: Point(x: 0, y: 0), width: 500, height: 500)
         canvas.defaultBorderWidth = 7
         
-        // canvas.fillColor = rainbow
-        
+       
+        // move first circle
         y1 += dy1
         x1 += dx1
-        pog += fx1
-        pog2 += fy1
+        
+        // moce second circle
+        x2 += dx2
+        y2 += dy2
+        
+        //set circle colours
         canvas.drawShapesWithFill = false
         canvas.fillColor = Color.white
-        canvas.drawEllipse(at: Point(x: x1, y: y1), width: 3, height: 3)
-        canvas.drawEllipse(at: Point(x: x1, y: y1), width: 50, height: 50)
         
+        // draw first circle
+        canvas.drawEllipse(at: Point(x: x1, y: y1), width: 3, height: 3)
+      
+        // draw second circle
+        canvas.drawEllipse(at: Point(x: x1, y: y1), width: 50, height: 50)
+       
+        // bounce first circle at edges
         if x1 >= 500 {
             dx1 = -1
             
         } else if x1 <= 0 {
             dx1 = 1
-            
         } else if y1 >= 500 {
             dy1 = -1
             
         } else if y1 <= 0 {
-            dy1 = +1
+            dy1 = 1
         }
-        
+       // draw second cirlce
         canvas.fillColor = Color.white
-        canvas.drawEllipse(at: Point(x: pog, y: pog2), width: 3, height: 3)
-        canvas.drawEllipse(at: Point(x: pog, y: pog2), width: 130, height: 130)
-        
-        if pog >= 500 {
-            fx1 = -1
+       // draw tiny circle insides second circle
+        canvas.drawEllipse(at: Point(x: x2, y: y2), width: 3, height: 3)
+        canvas.drawEllipse(at: Point(x: x2, y: y2), width: 50, height: 50)
+        // bounce sedcond circle at edges
+        if x2 >= 500 {
+            dx2 = -1
             
-        } else if pog <= 0 {
-            fx1 = 1
+        } else if x2 <= 0 {
+            dx2 = 1
             
-        } else if pog2 >= 500 {
-            fy1 = -1
+        } else if y2 >= 500 {
+            dy2 = -1
             
-        } else if pog2 <= 0 {
-            fy1 = +1
+        } else if y2 <= 0 {
+            dy2 = 1
         }
         
-        
-        let a = Double(x1 - pog)
-        let b = Double(y1 - pog2)
+        // find disatance between the circles
+        let a = Double(x1 - x2)
+        let b = Double(y1 - y2)
         let d = sqrt(a*a + b*b)
         print("Distance between circles is \(d)")
-        
-        if d < 100 {
-            canvas.drawLine(from: Point(x: x1, y: y1), to: Point(x: pog, y: pog2))
+        // when the circles overlap, draw a line bewtween two circles
+        if d < 200 {
+            canvas.drawLine(from: Point(x: x1, y: y1), to: Point(x: x2, y: y2))
         }
     }
     
