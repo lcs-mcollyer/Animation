@@ -35,6 +35,7 @@
 		F81DC9752539CCD500FC9AFF /* FivecCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DC9742539CCD500FC9AFF /* FivecCircles.swift */; };
 		F81DC9772539DF1C00FC9AFF /* RandomSquareGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DC9762539DF1C00FC9AFF /* RandomSquareGenerator.swift */; };
 		F81DC979253DC01E00FC9AFF /* LineFromCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DC978253DC01E00FC9AFF /* LineFromCircles.swift */; };
+		F8E5BFE725559B980001F92C /* MovingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5BFE625559B980001F92C /* MovingCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		F81DC9742539CCD500FC9AFF /* FivecCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FivecCircles.swift; sourceTree = "<group>"; };
 		F81DC9762539DF1C00FC9AFF /* RandomSquareGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSquareGenerator.swift; sourceTree = "<group>"; };
 		F81DC978253DC01E00FC9AFF /* LineFromCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineFromCircles.swift; sourceTree = "<group>"; };
+		F8E5BFE625559B980001F92C /* MovingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				F81DC9742539CCD500FC9AFF /* FivecCircles.swift */,
 				F81DC9762539DF1C00FC9AFF /* RandomSquareGenerator.swift */,
 				F81DC978253DC01E00FC9AFF /* LineFromCircles.swift */,
+				F8E5BFE625559B980001F92C /* MovingCircle.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				F81DC9772539DF1C00FC9AFF /* RandomSquareGenerator.swift in Sources */,
 				814ADAF3248E9FDA00F80486 /* Sketchable.swift in Sources */,
 				814ADAFD248EB56900F80486 /* EmptySketch.swift in Sources */,
+				F8E5BFE725559B980001F92C /* MovingCircle.swift in Sources */,
 				814ADAFF248EB5E300F80486 /* StaticSketch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

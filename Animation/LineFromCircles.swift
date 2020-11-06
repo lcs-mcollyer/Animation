@@ -21,6 +21,7 @@ class LineFromCircles: NSObject, Sketchable {
     var y1 = Int.random(in: 1...500)
     var dx1 = 1
     var dy1 = 1
+    
     // centre of second circle
     var x2 = Int.random(in: 1...500)
     var y2 = Int.random(in: 1...500)
@@ -109,6 +110,7 @@ class LineFromCircles: NSObject, Sketchable {
         let b = Double(y1 - y2)
         let d = sqrt(a*a + b*b)
         print("Distance between circles is \(d)")
+       
         // when the circles overlap, draw a line bewtween two circles
         if d < 200 {
             canvas.drawLine(from: Point(x: x1, y: y1), to: Point(x: x2, y: y2))
