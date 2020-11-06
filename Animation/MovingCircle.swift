@@ -14,10 +14,16 @@ import Foundation
 class MovingCircle {
     
     // 1. propertys (state)
-    
+    var x : Int
+    var y : Int
+    var dx : Int
+    var dy : Int
+    var size: Int
     
     // 2. The Initailiser ( inisialise, or "set up" the properties with a first value )
     
     
     // 3. methods ( make things happenn)
+    
+    
 }
