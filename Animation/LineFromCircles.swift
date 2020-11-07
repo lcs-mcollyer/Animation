@@ -32,7 +32,7 @@ class LineFromCircles: NSObject, Sketchable {
         //        for _ in stride(from: 1, to: 2, by: 1) {
         //
         //        }
-        for _ in 1...2 {
+        for _ in 1...4 {
             var newCircle = MovingCircle(x: Int.random(in: 0...canvas.width),
                                  y: Int.random(in: 0...canvas.height),
                                  dx: 1,
@@ -75,7 +75,11 @@ class LineFromCircles: NSObject, Sketchable {
         }
 
         // Check whether the circles overlap
-        circles[0].drawLineWhenOverLappingWidth(other: circles[1], on: canvas)
-        
+       circles[0].drawLineWhenOverLappingWidth(other: circles[1], on: canvas)
+        circles[0].drawLineWhenOverLappingWidth(other: circles[2], on: canvas)
+        circles[0].drawLineWhenOverLappingWidth(other: circles[3], on: canvas)
+        circles[1].drawLineWhenOverLappingWidth(other: circles[2], on: canvas)
+         circles[1].drawLineWhenOverLappingWidth(other: circles[3], on: canvas)
+        circles[2].drawLineWhenOverLappingWidth(other: circles[3], on: canvas)
     }
 }
