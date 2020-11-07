@@ -32,12 +32,12 @@ class LineFromCircles: NSObject, Sketchable {
         //        for _ in stride(from: 1, to: 2, by: 1) {
         //
         //        }
-        for _ in 1...4 {
+        for _ in 1...25 {
             var newCircle = MovingCircle(x: Int.random(in: 0...canvas.width),
-                                 y: Int.random(in: 0...canvas.height),
-                                 dx: 1,
-                                 dy: -1,
-                                 diameter: 200)
+                                         y: Int.random(in: 0...canvas.height),
+                                         dx: 1,
+                                         dy: -1,
+                                         diameter: 200)
             
             // now add the new circle to the list
             circles.append(newCircle)
@@ -73,13 +73,20 @@ class LineFromCircles: NSObject, Sketchable {
         for i in 0...circles.count - 1 {
             circles[i].update(on: canvas)
         }
-
+        
         // Check whether the circles overlap
-       circles[0].drawLineWhenOverLappingWidth(other: circles[1], on: canvas)
-        circles[0].drawLineWhenOverLappingWidth(other: circles[2], on: canvas)
-        circles[0].drawLineWhenOverLappingWidth(other: circles[3], on: canvas)
-        circles[1].drawLineWhenOverLappingWidth(other: circles[2], on: canvas)
-         circles[1].drawLineWhenOverLappingWidth(other: circles[3], on: canvas)
-        circles[2].drawLineWhenOverLappingWidth(other: circles[3], on: canvas)
+        //       circles[0].drawLineWhenOverLappingWidth(other: circles[1], on: canvas)
+        //        circles[0].drawLineWhenOverLappingWidth(other: circles[2], on: canvas)
+        //        circles[0].drawLineWhenOverLappingWidth(other: circles[3], on: canvas)
+        //        circles[1].drawLineWhenOverLappingWidth(other: circles[2], on: canvas)
+        //         circles[1].drawLineWhenOverLappingWidth(other: circles[3], on: canvas)
+        //        circles[2].drawLineWhenOverLappingWidth(other: circles[3], on: canvas)
+        
+        for i in stride(from: 0, through: circles.count - 2, by: 1) {
+            
+            for j in stride(from: i + 1, through: circles.count - 1, by: 1) {
+                circles[i].drawLineWhenOverLappingWidth(other: circles[j], on: canvas)
+            }
+        }
     }
 }
