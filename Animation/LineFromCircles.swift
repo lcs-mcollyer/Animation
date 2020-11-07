@@ -16,10 +16,10 @@ class LineFromCircles: NSObject, Sketchable {
     // Therefore, the line immediately below must always be present.
     var canvas: Canvas
     
-   // Make a small and large circle
-    var small: MovingCircle
-    var large: MovingCircle
-    
+    // Make a small and large circle
+    //    var small: MovingCircle
+    //    var large: MovingCircle
+    var circles: [MovingCircle] = [] // Empty list (array)
     
     
     // This function runs once
@@ -28,20 +28,26 @@ class LineFromCircles: NSObject, Sketchable {
         // Create canvas object – specify size
         canvas = Canvas(width: 500, height: 500)
         
+        // add circle
+        //        for _ in stride(from: 1, to: 2, by: 1) {
+        //
+        //        }
+        for _ in 1...2 {
+            var newCircle = MovingCircle(x: Int.random(in: 0...canvas.width),
+                                 y: Int.random(in: 0...canvas.height),
+                                 dx: 1,
+                                 dy: -1,
+                                 diameter: 200)
+            
+            // now add the new circle to the list
+            circles.append(newCircle)
+            
+        }
         // set up small and large circle
-        small = MovingCircle(x: Int.random(in: 0...canvas.width),
-                             y: Int.random(in: 0...canvas.height),
-                             dx: 1,
-                             dy: -1,
-                             diameter: 50)
         
         
         // set up small and large circle
-        large = MovingCircle(x: Int.random(in: 0...canvas.width),
-                             y: Int.random(in: 0...canvas.height),
-                             dx: 1,
-                             dy: -1,
-                             diameter: 200)
+        
         
         canvas.drawShapesWithBorders = true
         canvas.borderColor = Color.black
@@ -63,13 +69,13 @@ class LineFromCircles: NSObject, Sketchable {
         canvas.fillColor = Color.white
         canvas.drawRectangle(at: Point(x: 0, y: 0), width: 500, height: 500)
         canvas.defaultBorderWidth = 7
-       // update each circls position on the canvas
-        small.update(on: canvas)
-        large.update(on: canvas)
+        // update each circls position on the canvas
+        for i in 0...circles.count - 1 {
+            circles[i].update(on: canvas)
+        }
 
         // Check whether the circles overlap
-        small.drawLineWhenOverLappingWidth(other: large,
-                                           on: canvas)
+        circles[0].drawLineWhenOverLappingWidth(other: circles[1], on: canvas)
         
     }
 }
