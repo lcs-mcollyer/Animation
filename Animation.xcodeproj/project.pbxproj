@@ -36,6 +36,8 @@
 		F81DC9772539DF1C00FC9AFF /* RandomSquareGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DC9762539DF1C00FC9AFF /* RandomSquareGenerator.swift */; };
 		F81DC979253DC01E00FC9AFF /* LineFromCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DC978253DC01E00FC9AFF /* LineFromCircles.swift */; };
 		F8E5BFE725559B980001F92C /* MovingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5BFE625559B980001F92C /* MovingCircle.swift */; };
+		F8E5BFE9255AF67E0001F92C /* Spiral.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5BFE8255AF67E0001F92C /* Spiral.swift */; };
+		F8E5BFEB255AF7610001F92C /* individualspiral.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5BFEA255AF7610001F92C /* individualspiral.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,8 @@
 		F81DC9762539DF1C00FC9AFF /* RandomSquareGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSquareGenerator.swift; sourceTree = "<group>"; };
 		F81DC978253DC01E00FC9AFF /* LineFromCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineFromCircles.swift; sourceTree = "<group>"; };
 		F8E5BFE625559B980001F92C /* MovingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingCircle.swift; sourceTree = "<group>"; };
+		F8E5BFE8255AF67E0001F92C /* Spiral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spiral.swift; sourceTree = "<group>"; };
+		F8E5BFEA255AF7610001F92C /* individualspiral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = individualspiral.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,8 +191,10 @@
 				F81DC9702538C91600FC9AFF /* MovingSquare.swift */,
 				F81DC9742539CCD500FC9AFF /* FivecCircles.swift */,
 				F81DC9762539DF1C00FC9AFF /* RandomSquareGenerator.swift */,
-				F81DC978253DC01E00FC9AFF /* LineFromCircles.swift */,
 				F8E5BFE625559B980001F92C /* MovingCircle.swift */,
+				F81DC978253DC01E00FC9AFF /* LineFromCircles.swift */,
+				F8E5BFE8255AF67E0001F92C /* Spiral.swift */,
+				F8E5BFEA255AF7610001F92C /* individualspiral.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -518,10 +524,12 @@
 				81064A1C1C132DA2007ED524 /* Sketch.swift in Sources */,
 				81064A0A1C130A10007ED524 /* AppDelegate.swift in Sources */,
 				814ADAF5248EAB6A00F80486 /* TurtleSketch.swift in Sources */,
+				F8E5BFE9255AF67E0001F92C /* Spiral.swift in Sources */,
 				814ADAF9248EB34900F80486 /* BasicSketch.swift in Sources */,
 				814ADAFB248EB45F00F80486 /* AudioInputSketch.swift in Sources */,
 				F81DC9752539CCD500FC9AFF /* FivecCircles.swift in Sources */,
 				F81DC979253DC01E00FC9AFF /* LineFromCircles.swift in Sources */,
+				F8E5BFEB255AF7610001F92C /* individualspiral.swift in Sources */,
 				814ADAF1248E9F8200F80486 /* AudioAnalyser.swift in Sources */,
 				F81DC9772539DF1C00FC9AFF /* RandomSquareGenerator.swift in Sources */,
 				814ADAF3248E9FDA00F80486 /* Sketchable.swift in Sources */,
