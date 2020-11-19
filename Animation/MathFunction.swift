@@ -15,6 +15,7 @@ enum FunctionType {
     case absolutevalue
     case exponential
     case reciprocal
+    case sine
 }
 
 // enumeration
@@ -36,6 +37,7 @@ class MathFunction {
     var d: CGFloat      // Horizontal shift
     var c: CGFloat      // Vertical shift
     var type: FunctionType // tell us what shape to use / math function to use
+    
     // 2. Initializer
     //
     //    An initializer has one job: give each property an initial
@@ -45,7 +47,7 @@ class MathFunction {
          d: CGFloat,
          c: CGFloat,
          canvas: Canvas,
-    type: FunctionType) {
+         type: FunctionType) {
         
         // I want every function to begin off the left side of the canvas
         self.lastPoint = Point(x: -1 * canvas.width / 2 - 5,
@@ -80,7 +82,7 @@ class MathFunction {
         if x > 0 && x < canvas.width {
             
             // Determine the next x position
-            let nextX: CGFloat = CGFloat(x - canvas.width / 2)
+            let nextX: Degrees = Degrees(x - canvas.width / 2)
             
             // Determine the next y position
             var nextY: CGFloat = 0.0
@@ -100,11 +102,12 @@ class MathFunction {
             case .exponential:
                 nextY = a * exp((nextX - d) / k) + c
             case .reciprocal:
-                nextY = a * ((nextX - d) / k) + c
+                nextY = a * 1.0/((nextX - d) / k) + c
+            case .sine:
+                nextY = a * sin((nextX.asRadians()) / k) + c
             }
             
             
-            nextY = a * pow((nextX - d) / k, 2.0) + c
             
             // Set the next point
             let nextPoint = Point(x: nextX, y: nextY)

@@ -29,11 +29,12 @@ class FunctionArt1: NSObject, Sketchable {
             
             // Create the function
             let newFunction = MathFunction(a: 1.0,
-                                           k: 5.0,
-                                           d: CGFloat(i) * 25 - CGFloat(canvas.width / 2),
+                                           k: 0.5,
+                                           d: CGFloat(i) * 50 - CGFloat(canvas.width / 2),
                                            c: 0,
                                            canvas: canvas,
-                                           type: .reciprocal)
+                                           type: .sine
+            )
             
             // Add it to the list
             functions.append(newFunction)
@@ -41,25 +42,25 @@ class FunctionArt1: NSObject, Sketchable {
         }
         
         // Speed
-        canvas.framesPerSecond = 1
+        canvas.framesPerSecond = 60
     }
     
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
         
         // clear the canvas
-        canvas.fillColor = Color(hue: 0,
+        canvas.fillColor = Color(hue: 100,
                                  saturation: 0,
                                  brightness: 100,
-                                 alpha: 100)
+                                 alpha: 30)
         canvas.drawRectangle(at: Point(x: 0, y: 0),
-                             width: 1000,
-                             height: 1000)
+                             width: canvas.width,
+                             height: canvas.height)
         
         // What frame are we on?
         //        print(canvas.frameCount)
         
-        canvas.defaultLineWidth = 5
+        canvas.defaultLineWidth = 1
         
         // Set the origin to be the middle of the canvas
         canvas.translate(to: Point(x: canvas.width / 2, y: canvas.height / 2))
@@ -72,12 +73,18 @@ class FunctionArt1: NSObject, Sketchable {
         // draw the entire list of functions all at once
         for x in 0...canvas.width {
             
-      
+           
             
             
             // Update the position of all functions
             for function in functions {
-                function.c = CGFloat(newC)
+                
+                
+                
+//                function.c = CGFloat(newC)
+                
+                function.a = 200.00 * sin(Degrees(canvas.frameCount).asRadians())
+                
                 function.update(on: canvas,
                                 usingInputValue: x)
             }
