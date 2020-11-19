@@ -51,7 +51,7 @@ class FunctionArt1: NSObject, Sketchable {
         canvas.fillColor = Color(hue: 0,
                                  saturation: 0,
                                  brightness: 100,
-                                 alpha: 50)
+                                 alpha: 100)
         canvas.drawRectangle(at: Point(x: 0, y: 0),
                              width: 1000,
                              height: 1000)
@@ -59,18 +59,26 @@ class FunctionArt1: NSObject, Sketchable {
         // What frame are we on?
 //        print(canvas.frameCount)
         
-        canvas.defaultLineWidth = 10
+        canvas.defaultLineWidth = 5
         
         // Set the origin to be the middle of the canvas
         canvas.translate(to: Point(x: canvas.width / 2, y: canvas.height / 2))
 
-        // Update the position of all functions
-        for function in functions {
-            function.update(on: canvas,
-                            usingInputValue: canvas.frameCount)
+        
+        // draw the entire list of functions all at once
+        for x in 0...canvas.width {
+            // Update the position of all functions
+            for function in functions {
+                function.update(on: canvas,
+                                usingInputValue: x)
+        }
+        
+        
+        
         }
 
     
     }
+
 
 }
