@@ -17,8 +17,8 @@ class Sketch: NSObject {
 //    var currentDrawing = AudioInputSketch()
 //    var currentDrawing = StaticSketch()
 //    var currentDrawing = LineFromCircles ()
-//      var currentDrawing = Spiral()
-        var currentDrawing = FunctionArt1()
+//      var currentDrawing = FunctionArt2()
+        var currentDrawing = FunctionArt2()
 
 }
 
