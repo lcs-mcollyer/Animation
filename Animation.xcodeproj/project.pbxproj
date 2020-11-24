@@ -37,6 +37,7 @@
 		F81DC979253DC01E00FC9AFF /* LineFromCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DC978253DC01E00FC9AFF /* LineFromCircles.swift */; };
 		F83912A925656A7000A68B0E /* FunctionArt1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83912A825656A7000A68B0E /* FunctionArt1.swift */; };
 		F83912AB25656A9C00A68B0E /* MathFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83912AA25656A9C00A68B0E /* MathFunction.swift */; };
+		F843EED4256C032600E3F326 /* FunctionArt3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F843EED3256C032600E3F326 /* FunctionArt3.swift */; };
 		F8A283562568029D00FD0F4F /* FunctionArt2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A283552568029D00FD0F4F /* FunctionArt2.swift */; };
 		F8E5BFE725559B980001F92C /* MovingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5BFE625559B980001F92C /* MovingCircle.swift */; };
 		F8E5BFE9255AF67E0001F92C /* Spiral.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5BFE8255AF67E0001F92C /* Spiral.swift */; };
@@ -135,6 +136,7 @@
 		F81DC978253DC01E00FC9AFF /* LineFromCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineFromCircles.swift; sourceTree = "<group>"; };
 		F83912A825656A7000A68B0E /* FunctionArt1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionArt1.swift; sourceTree = "<group>"; };
 		F83912AA25656A9C00A68B0E /* MathFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFunction.swift; sourceTree = "<group>"; };
+		F843EED3256C032600E3F326 /* FunctionArt3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionArt3.swift; sourceTree = "<group>"; };
 		F8A283552568029D00FD0F4F /* FunctionArt2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionArt2.swift; sourceTree = "<group>"; };
 		F8E5BFE625559B980001F92C /* MovingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingCircle.swift; sourceTree = "<group>"; };
 		F8E5BFE8255AF67E0001F92C /* Spiral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spiral.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				F83912AA25656A9C00A68B0E /* MathFunction.swift */,
 				F83912A825656A7000A68B0E /* FunctionArt1.swift */,
 				F8A283552568029D00FD0F4F /* FunctionArt2.swift */,
+				F843EED3256C032600E3F326 /* FunctionArt3.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F843EED4256C032600E3F326 /* FunctionArt3.swift in Sources */,
 				F8A283562568029D00FD0F4F /* FunctionArt2.swift in Sources */,
 				F81DC9712538C91600FC9AFF /* MovingSquare.swift in Sources */,
 				81064A0C1C130A10007ED524 /* ViewController.swift in Sources */,

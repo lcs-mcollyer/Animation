@@ -41,12 +41,18 @@ class LineFromCircles: NSObject, Sketchable {
                            dy *= -1
                        }
 
+          
+          
+            
+            
+            
+            
             // create new circle
             var newCircle = MovingCircle(x: Int.random(in: 0...canvas.width),
                                          y: Int.random(in: 0...canvas.height),
                                          dx: dx,
                                          dy: dy,
-                                         diameter: 60,
+                                         diameter: 15,
                                          drawCircle: false)
 
             // now add the new circle to the list
@@ -58,11 +64,12 @@ class LineFromCircles: NSObject, Sketchable {
 
     }
     // This function runs repeatedly, forever, to create the animated effect
+   
     func draw() {
         canvas.drawShapesWithFill = true
-        canvas.fillColor = Color.white
+        canvas.fillColor = Color.init(hue: 1, saturation: 1, brightness: 0, alpha: 6)
         canvas.drawRectangle(at: Point(x: 0, y: 0), width: 500, height: 500)
-        canvas.defaultBorderWidth = 7
+        canvas.defaultBorderWidth = 1
 
         // update each circls position on the canvas
         for i in 0...circles.count - 1 {
@@ -78,3 +85,4 @@ class LineFromCircles: NSObject, Sketchable {
         }
     }
 }
+

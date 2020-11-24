@@ -16,9 +16,9 @@ class Sketch: NSObject {
 //    var currentDrawing = TurtleSketch()
 //    var currentDrawing = AudioInputSketch()
 //    var currentDrawing = StaticSketch()
-//    var currentDrawing = LineFromCircles ()
+    var currentDrawing = LineFromCircles ()
 //      var currentDrawing = FunctionArt2()
-        var currentDrawing = FunctionArt2()
-
+//        var currentDrawing = FunctionArt3()
+//   var currentDrawing = RandomSquareGenerator()
 }
 

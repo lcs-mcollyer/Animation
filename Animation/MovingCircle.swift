@@ -20,7 +20,8 @@ class MovingCircle {
     var dy : Int
     var diameter : Int
     var drawCircle: Bool
-    
+    var int1 = Int.random(in: 200...270)
+    var int2 = Int.random(in: 1...100)
     // Computer property
     var radius: Int {
         return self.diameter / 2
@@ -67,21 +68,22 @@ class MovingCircle {
         
         // bounce first circle at edges
         if x >= canvas.width {
-               dx = -1
+               dx = -10
                
            } else if x <= 0 {
-               dx = 1
+               dx = 10
         } else if y >= canvas.height {
-               dy = -1
+               dy = -10
                
            } else if y <= 0 {
-               dy = 1
+               dy = 10
            }
     
     
     }
     
-    
+ 
+ 
     func drawLineWhenOverLappingWidth(other: MovingCircle,
                                       on canvas: Canvas) {
           // find disatance between the circles
@@ -92,8 +94,8 @@ class MovingCircle {
              
         
 //        let Alpha = map(value: d, fromLower: 40, fromUpper: Double(self.radius + other.radius), toLower: 10, toUpper: 50)
-        canvas.lineColor = Color(hue: 100, saturation: 100, brightness: 100, alpha: 100)
-
+        canvas.lineColor = Color(hue: int1, saturation: int2, brightness: 100, alpha: 100)
+        canvas.defaultLineWidth = 3
               // when the circles overlap, draw a line bewtween two circles
               // when the distance inbetween is less than the sum of the radii
               if d < Double(self.radius + other.radius) {
